@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+    <title>BG Shop</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #eeddc1">
+    <div class="webpage">
+        <div class="jumbotron jbt">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <img src="../images/logo.png" width="230px"
+                        height="140px">
+                </div>
+                <div class="col-8">
+                    <div class="header_font">
+                        <b>- .BG. S h o p -</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-pills nav-justified" style="font-size: 25px; padding-left: 100px; padding-right: 100px;">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html"><i class="fas fa-cloud"></i>&nbsp;&nbsp;Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false"><i class="fas fa-chess"></i> &nbsp;Board Game</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./newgame.html"><i class="fas fa-clipboard"></i> &nbsp; >> Add New Board
+                        Game</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./boardgame.html"><i class="fas fa-chess-king"></i> &nbsp; >> All Board
+                        Games</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false"><i class="fas fa-cart-arrow-down"></i> &nbsp;Order</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./neworder.html"><i class="fas fa-address-card"></i> &nbsp; >> Create
+                        Order</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./order.html"><i class="fas fa-book-open"></i> &nbsp; >> Order
+                        History</a>
+                </div>
+            </li>
+        </ul>
+        <div class="bodycontentnewgame">
+            <br><br>
+            <h2>&nbsp;- &nbsp;<i class="fas fa-clipboard"></i>&nbsp; Add New Board Game -</h2>
+            <hr>
+            <br>
+            <div style="padding-left: 80px; font-size: 20px;">
+                <!-- <form style="padding-left: 80px; font-size: 20px;"> -->
+                <div class="form-group row">
+                    <label for="bgid" class="col-sm-3 col-form-label">Board game ID :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgid" placeholder="Board game ID"
+                            style="width: 300px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgname" class="col-sm-3 col-form-label">Board game name :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgname" placeholder="Board game name"
+                            style="width: 400px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgprice" class="col-sm-3 col-form-label">Board game price :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgprice" placeholder="Price"
+                            style="width: 200px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgurl" class="col-sm-3 col-form-label">Board game URL :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgurl" placeholder="Board game URL"
+                            style="width: 500px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgimurl" class="col-sm-3 col-form-label">Image URL :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgimurl" placeholder="Board game image URL"
+                            style="width: 500px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgage" class="col-sm-3 col-form-label">Recommended age :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgage" placeholder="Age" style="width: 100px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgcomplex" class="col-sm-3 col-form-label">Complexity :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgcomplex" placeholder="Complexity"
+                            style="width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgmint" class="col-sm-3 col-form-label">Minimum play time :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgmint" placeholder="Minute(s)"
+                            style="width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgmaxt" class="col-sm-3 col-form-label">Maximum play time :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgmaxt" placeholder="Minute(s)"
+                            style="width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgavgt" class="col-sm-3 col-form-label">Average play time :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgavgt" placeholder="Minute(s)"
+                            style="width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgminp" class="col-sm-3 col-form-label">Minimum player :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgminp" placeholder="Player(s)"
+                            style="width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgmaxp" class="col-sm-3 col-form-label">Maximum player :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgmaxp" placeholder="Player(s)"
+                            style="width: 150px;">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Board game category :</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate1" value="Abstract"
+                                    checked>
+                                <label class="form-check-label" for="cate1">
+                                    Abstract game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate2" value="Customizable">
+                                <label class="form-check-label" for="cate2">
+                                    Customizable game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate3" value="Children">
+                                <label class="form-check-label" for="cate3">
+                                    Children's game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate4" value="Family">
+                                <label class="form-check-label" for="cate4">
+                                    Family game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate5" value="Party">
+                                <label class="form-check-label" for="cate5">
+                                    Party game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate6" value="Strategy">
+                                <label class="form-check-label" for="cate6">
+                                    Strategy game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate7" value="Thematic">
+                                <label class="form-check-label" for="cate7">
+                                    Thematic game
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cate8" value="Wargame">
+                                <label class="form-check-label" for="cate8">
+                                    Wargame
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- <div class="form-group row">
+                    <div class="col-sm-2">Checkbox</div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                                Example checkbox
+                            </label>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="form-group row">
+                    <label for="bgdesigner" class="col-sm-3 col-form-label">Designer name :</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="bgdesigner" placeholder="Board game designer name"
+                            style="width: 400px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgyear" class="col-sm-3 col-form-label">Publish Year :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgyear" placeholder="Year" style="width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bgavg" class="col-sm-3 col-form-label">Average rating :</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="bgavg" placeholder="Rating" style="width: 150px;">
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-outline-dark btn-lg" id="btnsubmit"
+                            style="width: 550px;">Add board game</button>
+                    </div>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="../javascripts/newgame.js"></script>
+</body>
+
+</html>

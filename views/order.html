@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+    <title>BG Shop</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #eeddc1">
+    <div class="webpage">
+        <div class="jumbotron jbt">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <img src="../images/logo.png" width="230px" height="140px">
+                </div>
+                <div class="col-8">
+                    <div class="header_font">
+                        <b>- .BG. S h o p -</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-pills nav-justified" style="font-size: 25px; padding-left: 100px; padding-right: 100px;">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html"><i class="fas fa-cloud"></i>&nbsp;&nbsp;Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false"><i class="fas fa-chess"></i> &nbsp;Board Game</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./newgame.html"><i class="fas fa-clipboard"></i> &nbsp; >> Add New
+                        Board
+                        Game</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./boardgame.html"><i class="fas fa-chess-king"></i> &nbsp; >> All
+                        Board
+                        Games</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false"><i class="fas fa-cart-arrow-down"></i> &nbsp;Order</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./neworder.html"><i class="fas fa-address-card"></i> &nbsp; >> Create
+                        Order</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./order.html"><i class="fas fa-book-open"></i> &nbsp; >> Order
+                        History</a>
+                </div>
+            </li>
+        </ul>
+        <div class="bodycontentnewgame">
+            <br><br>
+            <h2>&nbsp;- &nbsp;<i class="fas fa-book-open"></i>&nbsp; Order History -</h2>
+            <hr>
+            <br>
+            <div style="padding-left: 300px; padding-right: 300px;">
+                <div class="row"
+                    style="font-size: 22px; background-color: burlywood; padding: 20px; padding-left: 40px; padding-right: 40px;">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="price">Cashier name:</label>
+                            <input type="text" placeholder="Name Surname" class="form-control" id="price">
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="form-group col-md-3">
+                            <label for="time">Year:</label>
+                            <input type="number" placeholder="XXXX" class="form-control" id="time">
+                        </div>
+                    </div>
+                    <button style="width: 200px;" type="button" class="btn btn-dark btn-lg"
+                        onclick="filter()">Filter</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div style="padding-left: 100px; padding-right: 100px;">
+                <div class="row">
+                    <table class="table table-striped paginated">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Customer name</th>
+                                <th scope="col">Cashier name</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Bill total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablebody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="../javascripts/order.js"></script>
+</body>
+
+</html>
