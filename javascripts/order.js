@@ -52,6 +52,7 @@ $(document).ready(function () {
 function filter() {
     $('#tablebody').empty();
     $('#page').remove();
+    $('#total').empty();
     pathtype = '';
     idata = '';
 
