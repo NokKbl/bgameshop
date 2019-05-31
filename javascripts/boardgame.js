@@ -1,4 +1,3 @@
-var games;
 var idata;
 var pathtype;
 var url;
@@ -6,7 +5,7 @@ var url;
 $(document).ready(function () {
     pathtype = 'boardgame'
     idata = '/'
-    url = "http://localhost:3000/"+pathtype+idata
+    url = "http://localhost:3000/" + pathtype + idata
 
     fetch(url)
         .then(response => response.json())
@@ -87,7 +86,7 @@ function filter() {
             use.push(elements[index]);
         }
     }
-    
+
     var len = use.length
     if (len == 0) {
         pathtype = 'boardgame'
@@ -147,8 +146,15 @@ function filter() {
         }
     } else if (len == 3) {
         //3
+        var a = use[0].value
+        var b = use[1].value
+        var c = use[2].value
     } else if (len == 4) {
         //4
+        var a = use[0].value
+        var b = use[1].value
+        var c = use[2].value
+        var d = use[3].value
     } else {
         //5
         pathtype = 'boardgame/findByAll/'

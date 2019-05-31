@@ -17,8 +17,7 @@
         <div class="jumbotron jbt">
             <div class="row align-items-center">
                 <div class="col-2">
-                    <img src="../images/logo.png" width="230px"
-                        height="140px">
+                    <img src="../images/logo.png" width="230px" height="140px">
                 </div>
                 <div class="col-8">
                     <div class="header_font">
@@ -35,10 +34,12 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false"><i class="fas fa-chess"></i> &nbsp;Board Game</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./newgame.html"><i class="fas fa-clipboard"></i> &nbsp; >> Add New Board
+                    <a class="dropdown-item" href="./newgame.html"><i class="fas fa-clipboard"></i> &nbsp; >> Add New
+                        Board
                         Game</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./boardgame.html"><i class="fas fa-chess-king"></i> &nbsp; >> All Board
+                    <a class="dropdown-item" href="./boardgame.html"><i class="fas fa-chess-king"></i> &nbsp; >> All
+                        Board
                         Games</a>
                 </div>
             </li>
@@ -59,186 +60,187 @@
             <h2>&nbsp;- &nbsp;<i class="fas fa-clipboard"></i>&nbsp; Add New Board Game -</h2>
             <hr>
             <br>
-            <div style="padding-left: 80px; font-size: 20px;">
-                <!-- <form style="padding-left: 80px; font-size: 20px;"> -->
-                <div class="form-group row">
-                    <label for="bgid" class="col-sm-3 col-form-label">Board game ID :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgid" placeholder="Board game ID"
-                            style="width: 300px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgname" class="col-sm-3 col-form-label">Board game name :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgname" placeholder="Board game name"
-                            style="width: 400px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgprice" class="col-sm-3 col-form-label">Board game price :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgprice" placeholder="Price"
-                            style="width: 200px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgurl" class="col-sm-3 col-form-label">Board game URL :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgurl" placeholder="Board game URL"
-                            style="width: 500px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgimurl" class="col-sm-3 col-form-label">Image URL :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgimurl" placeholder="Board game image URL"
-                            style="width: 500px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgage" class="col-sm-3 col-form-label">Recommended age :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgage" placeholder="Age" style="width: 100px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgcomplex" class="col-sm-3 col-form-label">Complexity :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgcomplex" placeholder="Complexity"
-                            style="width: 150px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgmint" class="col-sm-3 col-form-label">Minimum play time :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgmint" placeholder="Minute(s)"
-                            style="width: 150px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgmaxt" class="col-sm-3 col-form-label">Maximum play time :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgmaxt" placeholder="Minute(s)"
-                            style="width: 150px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgavgt" class="col-sm-3 col-form-label">Average play time :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgavgt" placeholder="Minute(s)"
-                            style="width: 150px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgminp" class="col-sm-3 col-form-label">Minimum player :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgminp" placeholder="Player(s)"
-                            style="width: 150px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgmaxp" class="col-sm-3 col-form-label">Maximum player :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgmaxp" placeholder="Player(s)"
-                            style="width: 150px;">
-                    </div>
-                </div>
-                <fieldset class="form-group">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">Board game category :</legend>
+            <form>
+                <div style="padding-left: 80px; font-size: 20px;">
+                    <!-- <form style="padding-left: 80px; font-size: 20px;"> -->
+                    <div class="form-group row">
+                        <label for="bgid" class="col-sm-3 col-form-label">Board game ID :</label>
                         <div class="col-sm-9">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate1" value="Abstract"
-                                    checked>
-                                <label class="form-check-label" for="cate1">
-                                    Abstract game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate2" value="Customizable">
-                                <label class="form-check-label" for="cate2">
-                                    Customizable game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate3" value="Children">
-                                <label class="form-check-label" for="cate3">
-                                    Children's game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate4" value="Family">
-                                <label class="form-check-label" for="cate4">
-                                    Family game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate5" value="Party">
-                                <label class="form-check-label" for="cate5">
-                                    Party game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate6" value="Strategy">
-                                <label class="form-check-label" for="cate6">
-                                    Strategy game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate7" value="Thematic">
-                                <label class="form-check-label" for="cate7">
-                                    Thematic game
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="cate8" value="Wargame">
-                                <label class="form-check-label" for="cate8">
-                                    Wargame
-                                </label>
-                            </div>
+                            <input type="text" class="form-control" id="bgid" placeholder="Board game ID"
+                                style="width: 300px;" autocomplete="off" required>
                         </div>
                     </div>
-                </fieldset>
-                <!-- <div class="form-group row">
-                    <div class="col-sm-2">Checkbox</div>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">
-                                Example checkbox
-                            </label>
+                    <div class="form-group row">
+                        <label for="bgname" class="col-sm-3 col-form-label">Board game name :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bgname" placeholder="Board game name"
+                                style="width: 400px;" autocomplete="off" required>
                         </div>
                     </div>
-                </div> -->
-                <div class="form-group row">
-                    <label for="bgdesigner" class="col-sm-3 col-form-label">Designer name :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="bgdesigner" placeholder="Board game designer name"
-                            style="width: 400px;">
+                    <div class="form-group row">
+                        <label for="bgprice" class="col-sm-3 col-form-label">Board game price :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bgprice" placeholder="Price"
+                                style="width: 200px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgurl" class="col-sm-3 col-form-label">Board game URL :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bgurl" placeholder="Board game URL"
+                                style="width: 500px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgimurl" class="col-sm-3 col-form-label">Image URL :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bgimurl" placeholder="Board game image URL"
+                                style="width: 500px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgage" class="col-sm-3 col-form-label">Recommended age :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgage" placeholder="Age" style="width: 100px;"
+                                autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgcomplex" class="col-sm-3 col-form-label">Complexity :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bgcomplex" placeholder="Complexity"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgmint" class="col-sm-3 col-form-label">Minimum play time :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgmint" placeholder="Minute(s)"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgmaxt" class="col-sm-3 col-form-label">Maximum play time :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgmaxt" placeholder="Minute(s)"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgavgt" class="col-sm-3 col-form-label">Average play time :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgavgt" placeholder="Minute(s)"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgminp" class="col-sm-3 col-form-label">Minimum player :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgminp" placeholder="Player(s)"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgmaxp" class="col-sm-3 col-form-label">Maximum player :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgmaxp" placeholder="Player(s)"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Board game category :</legend>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate1"
+                                        value="Abstract" required>
+                                    <label class="form-check-label" for="cate1">
+                                        Abstract game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate2"
+                                        value="Customizable">
+                                    <label class="form-check-label" for="cate2">
+                                        Customizable game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate3"
+                                        value="Children">
+                                    <label class="form-check-label" for="cate3">
+                                        Children's game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate4"
+                                        value="Family">
+                                    <label class="form-check-label" for="cate4">
+                                        Family game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate5"
+                                        value="Party">
+                                    <label class="form-check-label" for="cate5">
+                                        Party game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate6"
+                                        value="Strategy">
+                                    <label class="form-check-label" for="cate6">
+                                        Strategy game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate7"
+                                        value="Thematic">
+                                    <label class="form-check-label" for="cate7">
+                                        Thematic game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="cate8"
+                                        value="Wargame">
+                                    <label class="form-check-label" for="cate8">
+                                        Wargame
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label for="bgdesigner" class="col-sm-3 col-form-label">Designer name :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bgdesigner"
+                                placeholder="Board game designer name" style="width: 400px;" autocomplete="off"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgyear" class="col-sm-3 col-form-label">Publish Year :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgyear" placeholder="Year"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bgavg" class="col-sm-3 col-form-label">Average rating :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="bgavg" placeholder="Rating"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-outline-dark btn-lg" id="abg" style="width: 550px;"
+                                onclick="addgame()">Add board game</button>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="bgyear" class="col-sm-3 col-form-label">Publish Year :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgyear" placeholder="Year" style="width: 150px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="bgavg" class="col-sm-3 col-form-label">Average rating :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="bgavg" placeholder="Rating" style="width: 150px;">
-                    </div>
-                </div>
-                <br>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-outline-dark btn-lg" id="btnsubmit"
-                            style="width: 550px;">Add board game</button>
-                    </div>
-                </div>
-                <!-- </form> -->
-            </div>
+            </form>
             <br><br><br>
         </div>
     </div>

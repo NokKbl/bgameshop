@@ -17,8 +17,7 @@
         <div class="jumbotron jbt">
             <div class="row align-items-center">
                 <div class="col-2">
-                    <img src="../images/logo.png" width="230px"
-                        height="140px">
+                    <img src="../images/logo.png" width="230px" height="140px">
                 </div>
                 <div class="col-8">
                     <div class="header_font">
@@ -35,10 +34,12 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false"><i class="fas fa-chess"></i> &nbsp;Board Game</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./newgame.html"><i class="fas fa-clipboard"></i> &nbsp; >> Add New Board
+                    <a class="dropdown-item" href="./newgame.html"><i class="fas fa-clipboard"></i> &nbsp; >> Add New
+                        Board
                         Game</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./boardgame.html"><i class="fas fa-chess-king"></i> &nbsp; >> All Board
+                    <a class="dropdown-item" href="./boardgame.html"><i class="fas fa-chess-king"></i> &nbsp; >> All
+                        Board
                         Games</a>
                 </div>
             </li>
@@ -59,119 +60,127 @@
             <h2>&nbsp;- &nbsp;<i class="fas fa-address-card"></i>&nbsp; Create New Order -</h2>
             <hr>
             <br>
-            <div style="padding-left: 80px; padding-right: 150px; font-size: 20px;">
-                <div class="form-group row">
-                    <label for="odname" class="col-sm-3 col-form-label">Customer name :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="odname" placeholder="Name Surname"
-                            style="width: 300px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="odage" class="col-sm-3 col-form-label">Customer age :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="odage" placeholder="Age" style="width: 100px;">
-                    </div>
-                </div>
-                <fieldset class="form-group">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">Customer gender :</legend>
+            <form>
+                <div style="padding-left: 80px; padding-right: 150px; font-size: 20px;">
+                    <div class="form-group row">
+                        <label for="odname" class="col-sm-3 col-form-label">Customer name :</label>
                         <div class="col-sm-9">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="m" value="Male">
-                                <label class="form-check-label" for="m">
-                                    Male
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category" id="fm" value="Female">
-                                <label class="form-check-label" for="fm">
-                                    Female
-                                </label>
-                            </div>
+                            <input type="text" class="form-control" id="odname" placeholder="Name Surname"
+                                style="width: 300px;" autocomplete="off" required>
                         </div>
                     </div>
-                </fieldset>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="bgn1">Board game name:</label>
-                        <select id="bgn1" class="form-control" onchange="if (this.selectedIndex) showBGprice1();">
-                            <option value="-1" selected>...Choose board game...</option>
-                        </select>
+                    <div class="form-group row">
+                        <label for="odage" class="col-sm-3 col-form-label">Customer age :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control myprice" id="odage" placeholder="Age"
+                                style="width: 100px;" autocomplete="off" required>
+                        </div>
                     </div>
-                    <div class="form-group col-md-2">
-                        <label for="showprice1">Price:</label>
-                        <input type="number" class="form-control" id="showprice1" value="0.00" readonly>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Customer gender :</legend>
+                            <div class="col-sm-9">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="category" id="m" value="Male"
+                                        required>
+                                    &nbsp;&nbsp;
+                                    <label class="form-check-label" for="m">
+                                        Male
+                                    </label>
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="category" id="fm" value="Female">
+                                    &nbsp;&nbsp;
+                                    <label class="form-check-label" for="fm">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="bgn1">Board game name:</label>
+                            <select id="bgn1" class="form-control" onchange="if (this.selectedIndex) showBGprice1();">
+                                <option value="-1" selected>...Choose board game...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="showprice1">Price:</label>
+                            <input type="number" class="form-control myprice" id="showprice1" value="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <select id="bgn2" class="form-control" onchange="if (this.selectedIndex) showBGprice2();">
+                                <option value="-1" selected>...Choose board game...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="number" class="form-control myprice" id="showprice2" value="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <select id="bgn3" class="form-control" onchange="if (this.selectedIndex) showBGprice3();">
+                                <option value="-1" selected>...Choose board game...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="number" class="form-control myprice" id="showprice3" value="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <select id="bgn4" class="form-control" onchange="if (this.selectedIndex) showBGprice4();">
+                                <option value="-1" selected>...Choose board game...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="number" class="form-control myprice" id="showprice4" value="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <select id="bgn5" class="form-control" onchange="if (this.selectedIndex) showBGprice5();">
+                                <option value="-1" selected>...Choose board game...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="number" class="form-control myprice" id="showprice5" value="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="odbill" class="col-sm-3 col-form-label">Bill total :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control myprice" id="odbill" placeholder="Total"
+                                style="width: 180px;" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="odcash" class="col-sm-3 col-form-label">Cashier name :</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="odcash" placeholder="Cashier name"
+                                style="width: 400px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="odyear" class="col-sm-3 col-form-label">Order Year :</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="odyear" placeholder="Year"
+                                style="width: 150px;" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-outline-dark btn-lg" id="corder" style="width: 550px;"
+                                onclick="addorder()">Create Order</button>
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <select id="bgn2" class="form-control" onchange="if (this.selectedIndex) showBGprice2();">
-                            <option value="-1" selected>...Choose board game...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <input type="number" class="form-control" id="showprice2" value="0.00" readonly>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <select id="bgn3" class="form-control" onchange="if (this.selectedIndex) showBGprice3();">
-                            <option value="-1" selected>...Choose board game...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <input type="number" class="form-control" id="showprice3" value="0.00" readonly>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <select id="bgn4" class="form-control" onchange="if (this.selectedIndex) showBGprice4();">
-                            <option value="-1" selected>...Choose board game...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <input type="number" class="form-control" id="showprice4" value="0.00" readonly>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <select id="bgn5" class="form-control" onchange="if (this.selectedIndex) showBGprice5();">
-                            <option value="-1" selected>...Choose board game...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <input type="number" class="form-control" id="showprice5" value="0.00" readonly>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="odbill" class="col-sm-3 col-form-label">Bill total :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="odbill" placeholder="Total" style="width: 180px;"
-                            readonly>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="odcash" class="col-sm-3 col-form-label">Cashier name :</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="odcash" placeholder="Cashier name"
-                            style="width: 400px;">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="odyear" class="col-sm-3 col-form-label">Order Year :</label>
-                    <div class="col-sm-9">
-                        <input type="number" class="form-control" id="odyear" placeholder="Year" style="width: 150px;">
-                    </div>
-                </div>
-                <br>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-outline-dark btn-lg" id="btnsubmit"
-                            style="width: 550px;">Create Order</button>
-                    </div>
-                </div>
-            </div>
+            </form>
             <br><br><br>
         </div>
     </div>

@@ -64,6 +64,27 @@
                 <div class="row"
                     style="font-size: 22px; background-color: burlywood; padding: 20px; padding-left: 40px; padding-right: 40px;">
                     <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="price">Budget:</label>
+                            <input type="number" placeholder="X.XX" class="form-control" style="text-align: center;" id="price">
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="form-group col-md-2">
+                            <label for="time">Time:</label>
+                            <input type="number" placeholder="X.XX" class="form-control" style="text-align: center;" id="time">
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="form-group col-md-2">
+                            <label for="player">Player:</label>
+                            <input type="number" placeholder="X" class="form-control" style="text-align: center;" id="player">
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="form-group col">
+                            <label for="year">Publish Year:</label>
+                            <input type="number" placeholder="XXXX" class="form-control" style="text-align: center;" id="year">
+                        </div>
+                    </div>
+                    <div class="form-row">
                         <label>Board Game Category:</label>
                         <div class="form-group" style="padding-left: 40px;">
                             <div class="form-check form-check-inline" style="visibility: hidden; display: none;">
@@ -140,56 +161,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-3">
-                            <label for="price">Price:</label>
-                            <input type="number" placeholder="X.XX" class="form-control" id="price">
-                        </div>
-                        &nbsp;&nbsp;
-                        <div class="form-group col-md-2">
-                            <label for="time">Time:</label>
-                            <input type="number" placeholder="X.XX" class="form-control" id="time">
-                        </div>
-                        &nbsp;&nbsp;
-                        <div class="form-group col-md-2">
-                            <label for="player">Player:</label>
-                            <input type="number" placeholder="X" class="form-control" id="player">
-                        </div>
-                        &nbsp;&nbsp;
-                        <div class="form-group col">
-                            <label for="year">Publish Year:</label>
-                            <input type="number" placeholder="XXXX" class="form-control" id="year">
-                        </div>
-                    </div>
+
                     <hr>
                     <button style="width: 200px;" type="button" class="btn btn-dark btn-lg"
                         onclick="filter()">Filter</button>
                 </div>
             </div>
             <br>
-            <div id="try">
+            <!-- <div id="try"> -->
 
-            </div>
-            <br>
-            <div style="padding-left: 100px; padding-right: 100px;">
-                <div class="row">
-                    <table class="table table-striped paginated">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Board Game Name</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablebody">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <br><br><br>
         </div>
+        <br>
+        <div style="padding-left: 100px; padding-right: 100px;">
+            <div class="row">
+                <table class="table table-striped paginated">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Board Game Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
