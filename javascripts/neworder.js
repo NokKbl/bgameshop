@@ -214,5 +214,4 @@ function addorder() {
             console.log("success");
         }
     });
-
 }

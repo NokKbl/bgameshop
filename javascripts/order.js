@@ -10,6 +10,7 @@ $(document).ready(function () {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             for (let index = 0; index < (data.order).length; index++) {
                 var n = parseInt(index) + 1;
                 var x = (data.order)[index];
@@ -46,20 +47,22 @@ $(document).ready(function () {
 });
 
 function filter() {
-    pathtype = ''
-    idata = ''
+    $('#tablebody').empty();
+    $('#page').remove();
+    pathtype = '';
+    idata = '';
 
     var icashname = document.getElementById('cname').value;
     var iyear = document.getElementById('yr').value;
 
     if(icashname!="" && iyear!=""){
-        // pathtype = 'order'
-        // idata = '{"cashier_name":"' + icashname + '","year":"' + iyear + '"}'
+        pathtype = 'order/findByYC/'
+        idata = '{"cashier":"' + icashname + '","year":"' + iyear + '"}'
     }else if(icashname!="" && iyear==""){
         pathtype = 'order/findByCashiername/'
         idata = icashname
     }else if(icashname=="" && iyear!=""){
-        pathtype = 'order/findByUsername/'
+        pathtype = 'order/findByYear/'
         idata = iyear
     }else{
         pathtype = 'order'

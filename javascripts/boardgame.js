@@ -10,14 +10,27 @@ $(document).ready(function () {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             for (let index = 0; index < (data.boardgame).length; index++) {
                 var n = parseInt(index) + 1;
                 var x = (data.boardgame)[index];
-                var picurl = x.image_url;
+                var bgid = x.boardgame_id;
                 var name = x.name;
+                var bgurl = x.boardgame_url;
+                var picurl = x.image_url;
+                var age = x.age;
                 var category = x.category;
                 var price = x.price;
-                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td><img src=' + picurl + ' width="230px" height="140px"></td><td>' + name + '</td><td>' + category + '</td><td>' + price + '</td></tr>');
+                var designer = x.designer;
+                var comp = x.complexity;
+                var yr = x.year;
+                var mint = x.min_time;
+                var maxt = x.max_time;
+                var avgt = x.avg_time;
+                var minp = x.min_player;
+                var maxp = x.max_player;
+                var rate = x.avg_rating;
+                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td><img src=' + picurl + ' width="400px" height="auto" style="padding-top: 10px;"></td><td><div style="padding-left: 30px; padding-right: 30px; padding-bottom: 30px; padding-top: 10px;"><label><b>Board Game ID :</b> ' + bgid + '</label><br><label><b>Board Game Name :</b> ' + name + '</label><br><label><b>Game Category :</b> ' + category + '</label><br><label><b>Price :</b> $ ' + price + '</label><br><label><b>Average Rating :</b> ' + rate + '</label><br><label><b>Recommended Age :</b> ' + age + ' +</label><br><label><b>Game Complexity :</b> ' + comp + '</label><br><label><b>Minimum Play Time :</b> ' + mint + ' Minutes</label><br><label><b>Maximum Play Time :</b> ' + maxt + ' Minutes</label><br><label><b>Average Play Time :</b> ' + avgt + ' Minutes</label><br><label><b>Minimum Player :</b> ' + minp + ' Player(s)</label><br><label><b>Maximum Player :</b> ' + maxp + ' Player(s)</label><br><label><b>Designer Name(s) :</b> ' + designer + '</label><br><label><b>Publish Year :</b> ' + yr + '</label><br><hr><label><b> >> Ref. << </b></label><br><label><b>Board Game URL :</b> <a href="' + bgurl + '">' + bgurl + '</a></label><br><label><b>Image URL :</b> <a href="' + picurl + '">' + picurl + '</a></label><br></div></td></tr>');
             }
 
             $('table.paginated').each(function () {
@@ -49,9 +62,9 @@ function filter() {
     games = [];
     $('#tablebody').empty();
     $('#page').remove();
-    var icate = document.getElementById('cate0');
     pathtype = '';
     idata = '';
+    var icate = document.getElementById('cate0');
 
     if ($('#cate1').prop('checked')) {
         icate = document.getElementById('cate1');
@@ -105,7 +118,7 @@ function filter() {
         } else if (use[0].id == 'year') {
             pathtype = 'boardgame/findByYear/'
             idata = use[0].value
-        } else {//if(use[0].name == 'category'){
+        } else { //if(use[0].name == 'category')
             pathtype = 'boardgame/findByCategory/'
             idata = use[0].value
         }
@@ -140,7 +153,7 @@ function filter() {
         } else if (use[0].id == 'time' && use[1].id == 'year') {
             pathtype = 'boardgametwo/findByTY/'
             idata = '{"time":"' + a + '","year":"' + b + '"}'
-        } else { //if(use[0].id == 'player' && use[1].id == 'year'){
+        } else { //if(use[0].id == 'player' && use[1].id == 'year')
             pathtype = 'boardgametwo/findByYP/'
             idata = '{"player":"' + a + '","year":"' + b + '"}'
         }
@@ -149,12 +162,61 @@ function filter() {
         var a = use[0].value
         var b = use[1].value
         var c = use[2].value
+
+        if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'time') {
+            pathtype = 'boardgamethree/findByCPT/'
+            idata = '{"category":"' + a + '","price":"' + b + '","time":"' + c + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'player') {
+            pathtype = 'boardgamethree/findByCPP/'
+            idata = '{"category":"' + a + '","price":"' + b + '","player":"' + c + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'year') {
+            pathtype = 'boardgamethree/findByCPY/'
+            idata = '{"category":"' + a + '","price":"' + b + '","year":"' + c + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'time' && use[2].id == 'player') {
+            pathtype = 'boardgamethree/findByCTP/'
+            idata = '{"category":"' + a + '","time":"' + b + '","player":"' + c + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'time' && use[2].id == 'year') {
+            pathtype = 'boardgamethree/findByCYT/'
+            idata = '{"category":"' + a + '","time":"' + b + '","year":"' + c + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'player' && use[2].id == 'year') {
+            pathtype = 'boardgamethree/findByCYP/'
+            idata = '{"category":"' + a + '","player":"' + b + '","year":"' + c + '"}'
+        } else if (use[0].id == 'price' && use[1].id == 'time' && use[2].id == 'player') {
+            pathtype = 'boardgamethree/findByPTP/'
+            idata = '{"price":"' + a + '","time":"' + b + '","player":"' + c + '"}'
+        } else if (use[0].id == 'price' && use[1].id == 'player' && use[2].id == 'year') {
+            pathtype = 'boardgamethree/findByPPY/'
+            idata = '{"price":"' + a + '","player":"' + b + '","year":"' + c + '"}'
+        } else if (use[0].id == 'time' && use[1].id == 'player' && use[2].id == 'year') {
+            pathtype = 'boardgamethree/findByTRY/'
+            idata = '{"time":"' + a + '","player":"' + b + '","year":"' + c + '"}'
+        } else { //if (use[0].id == 'price' && use[1].id == 'time' && use[2].id == 'year')
+            pathtype = 'boardgamethree/findByPYT/'
+            idata = '{"price":"' + a + '","time":"' + b + '","year":"' + c + '"}'
+        }
     } else if (len == 4) {
         //4
         var a = use[0].value
         var b = use[1].value
         var c = use[2].value
         var d = use[3].value
+
+        if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'time' && use[3].id == 'player') {
+            pathtype = 'boardgamethree/findByCPTP/'
+            idata = '{"category":"' + a + '","price":"' + b + '","time":"' + c + '","player":"' + d + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'time' && use[3].id == 'year') {
+            pathtype = 'boardgamethree/findByCPTY/'
+            idata = '{"category":"' + a + '","price":"' + b + '","time":"' + c + '","year":"' + d + '"}'
+        } else if (use[0].id == 'price' && use[1].id == 'time' && use[2].id == 'player' && use[3].id == 'year') {
+            pathtype = 'boardgamethree/findByYPTP/'
+            idata = '{"price":"' + a + '","time":"' + b + '","player":"' + c + '","year":"' + d + '"}'
+        } else if (use[0].name == 'category' && use[1].id == 'time' && use[2].id == 'player' && use[3].id == 'year') {
+            pathtype = 'boardgamethree/findByYPTC/'
+            idata = '{"category":"' + a + '","time":"' + b + '","player":"' + c + '","year":"' + d + '"}'
+        } else { //if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'player' && use[3].id == 'year')
+            pathtype = 'boardgamethree/findByYPPC/'
+            idata = '{"category":"' + a + '","price":"' + b + '","player":"' + c + '","year":"' + d + '"}'
+        }
     } else {
         //5
         pathtype = 'boardgame/findByAll/'
@@ -168,18 +230,29 @@ function filter() {
 
     url = "http://localhost:3000/" + pathtype + idata
 
-    console.log("filter " + url);
     fetch(url)
         .then(response => response.json())
         .then(data => {
             for (let index = 0; index < (data.boardgame).length; index++) {
                 var n = parseInt(index) + 1;
                 var x = (data.boardgame)[index];
-                var picurl = x.image_url;
+                var bgid = x.boardgame_id;
                 var name = x.name;
+                var bgurl = x.boardgame_url;
+                var picurl = x.image_url;
+                var age = x.age;
                 var category = x.category;
                 var price = x.price;
-                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td><img src=' + picurl + ' width="230px" height="140px"></td><td>' + name + '</td><td>' + category + '</td><td>' + price + '</td></tr>');
+                var designer = x.designer;
+                var comp = x.complexity;
+                var yr = x.year;
+                var mint = x.min_time;
+                var maxt = x.max_time;
+                var avgt = x.avg_time;
+                var minp = x.min_player;
+                var maxp = x.max_player;
+                var rate = x.avg_rating;
+                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td><img src=' + picurl + ' width="400px" height="auto" style="padding-top: 10px;"></td><td><div style="padding-left: 30px; padding-right: 30px; padding-bottom: 30px; padding-top: 10px;"><label><b>Board Game ID :</b> ' + bgid + '</label><br><label><b>Board Game Name :</b> ' + name + '</label><br><label><b>Game Category :</b> ' + category + '</label><br><label><b>Price :</b> $ ' + price + '</label><br><label><b>Average Rating :</b> ' + rate + '</label><br><label><b>Recommended Age :</b> ' + age + ' +</label><br><label><b>Game Complexity :</b> ' + comp + '</label><br><label><b>Minimum Play Time :</b> ' + mint + ' Minutes</label><br><label><b>Maximum Play Time :</b> ' + maxt + ' Minutes</label><br><label><b>Average Play Time :</b> ' + avgt + ' Minutes</label><br><label><b>Minimum Player :</b> ' + minp + ' Player(s)</label><br><label><b>Maximum Player :</b> ' + maxp + ' Player(s)</label><br><label><b>Designer Name(s) :</b> ' + designer + '</label><br><label><b>Publish Year :</b> ' + yr + '</label><br><hr><label><b> >> Ref. << </b></label><br><label><b>Board Game URL :</b> <a href="' + bgurl + '">' + bgurl + '</a></label><br><label><b>Image URL :</b> <a href="' + picurl + '">' + picurl + '</a></label><br></div></td></tr>');
             }
 
             $('table.paginated').each(function () {
