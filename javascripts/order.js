@@ -10,7 +10,7 @@ $(document).ready(function () {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            var total = 0;
             for (let index = 0; index < (data.order).length; index++) {
                 var n = parseInt(index) + 1;
                 var x = (data.order)[index];
@@ -18,9 +18,12 @@ $(document).ready(function () {
                 var cashname = x.cashier_name;
                 var year = x.year;
                 var bill = x.billtotal;
-                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td>' + custname + '</td><td>' + cashname + '</td><td>' + year + '</td><td>' + bill + '</td></tr>');
+                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td>' + custname + '</td><td>' + cashname + '</td><td>' + year + '</td><td>$ ' + bill + '</td></tr>');
+                total += parseFloat(bill);
             }
 
+            $('#total').append('<label><b>Total Income : </b>$ '+ total.toFixed(2) +'</label>');
+            
             $('table.paginated').each(function () {
                 var currentPage = 0;
                 var numPerPage = 10;
@@ -74,6 +77,7 @@ function filter() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            var total = 0;
             for (let index = 0; index < (data.order).length; index++) {
                 var n = parseInt(index) + 1;
                 var x = (data.order)[index];
@@ -81,8 +85,11 @@ function filter() {
                 var cashname = x.cashier_name;
                 var year = x.year;
                 var bill = x.billtotal;
-                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td>' + custname + '</td><td>' + cashname + '</td><td>' + year + '</td><td>' + bill + '</td></tr>');
+                $('#tablebody').append('<tr><th scope="row">' + n + '</th><td>' + custname + '</td><td>' + cashname + '</td><td>' + year + '</td><td>$ ' + bill + '</td></tr>');
+                total += parseFloat(bill);
             }
+
+            $('#total').append('<label><b>Total Income : </b>$ '+ total.toFixed(2) +'</label>');
 
             $('table.paginated').each(function () {
                 var currentPage = 0;
