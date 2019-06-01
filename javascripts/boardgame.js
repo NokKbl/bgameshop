@@ -202,19 +202,19 @@ function filter() {
         var d = use[3].value
 
         if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'time' && use[3].id == 'player') {
-            pathtype = 'boardgamethree/findByCPTP/'
+            pathtype = 'boardgamefour/findByCPTP/'
             idata = '{"category":"' + a + '","price":"' + b + '","time":"' + c + '","player":"' + d + '"}'
         } else if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'time' && use[3].id == 'year') {
-            pathtype = 'boardgamethree/findByCPTY/'
+            pathtype = 'boardgamefour/findByCPTY/'
             idata = '{"category":"' + a + '","price":"' + b + '","time":"' + c + '","year":"' + d + '"}'
         } else if (use[0].id == 'price' && use[1].id == 'time' && use[2].id == 'player' && use[3].id == 'year') {
-            pathtype = 'boardgamethree/findByYPTP/'
+            pathtype = 'boardgamefour/findByYPTP/'
             idata = '{"price":"' + a + '","time":"' + b + '","player":"' + c + '","year":"' + d + '"}'
         } else if (use[0].name == 'category' && use[1].id == 'time' && use[2].id == 'player' && use[3].id == 'year') {
-            pathtype = 'boardgamethree/findByYPTC/'
+            pathtype = 'boardgamefour/findByYPTC/'
             idata = '{"category":"' + a + '","time":"' + b + '","player":"' + c + '","year":"' + d + '"}'
         } else { //if (use[0].name == 'category' && use[1].id == 'price' && use[2].id == 'player' && use[3].id == 'year')
-            pathtype = 'boardgamethree/findByYPPC/'
+            pathtype = 'boardgamefour/findByYPPC/'
             idata = '{"category":"' + a + '","price":"' + b + '","player":"' + c + '","year":"' + d + '"}'
         }
     } else {
